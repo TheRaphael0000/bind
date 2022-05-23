@@ -11,3 +11,4 @@ $TTL	604800
 www IN  A	%IP%
 files IN  A	%IP%
 dav IN  A	%IP%
+challsection IN  A       %IP%
