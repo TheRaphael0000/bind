@@ -31,9 +31,6 @@ if previous_ip == current_ip:
 
 print(f"IP CHANGED, {previous_ip} != {current_ip}")
 
-# update the last ip file
-open(last_ip_filename, "wb").write(current_ip.encode("utf-8"))
-
 # ask no ip for ip update
 print("NO-IP IP CHANGE REQUEST")
 url = f"{no_ip_update_route}?hostname={','.join(config['noip_ddns'])}"
@@ -56,3 +53,6 @@ for dns_file in dns_files:
          "wb").write(rendered_template.encode("utf-8"))
 
 os.system("systemctl restart bind9")
+
+# update the last ip file
+open(last_ip_filename, "wb").write(current_ip.encode("utf-8"))
