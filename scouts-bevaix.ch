@@ -7,5 +7,5 @@ $TTL	604800
 			 604800 )	; Negative Cache TTL
 ;
 @	IN	NS	scouts-bevaix.ch.
-@	IN	A	%IP%
-www IN  A	%IP%
+@	IN	A	{{ ip }}
+www IN  A	{{ ip }}

@@ -7,9 +7,9 @@ $TTL	604800
 			 604800 )	; Negative Cache TTL
 ;
 @	IN	NS	theraphael0000.ch.
-@	IN	A	%IP%
-www IN  A	%IP%
-files IN  A	%IP%
-dav IN  A	%IP%
-challsection IN  A       %IP%
-cv IN A %IP%
+@	IN	A	{{ ip }}
+www IN  A	{{ ip }}
+files IN  A	{{ ip }}
+dav IN  A	{{ ip }}
+challsection IN  A       {{ ip }}
+cv IN A {{ ip }}

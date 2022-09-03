@@ -1,11 +1,13 @@
-$TTL    604800
-@       IN      SOA     localhost. root.localhost. (
-                              2         ; Serial
-                         604800         ; Refresh
-                          86400         ; Retry
-                        2419200         ; Expire
-                         604800 )       ; Negative Cache TTL
-;
-@       IN      NS      tahm-ken.ch.
-@       IN      A       %IP%
-www IN  A       %IP%
+$TTL 604800
+
+@   IN SOA localhost. root.localhost. (
+; Serial / Refresh / Retry / Expire / Negative Cache TTL
+2
+604800
+86400
+2419200
+604800 )
+
+@   IN  NS tahm-ken.ch.
+@   IN   A {{ ip }}
+www IN   A {{ ip }}
