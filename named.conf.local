@@ -20,3 +20,8 @@ zone "scouts-bevaix.ch" {
 	type master;
 	file "/etc/bind/zones/scouts-bevaix.ch";
 };
+
+zone "tahm-ken.ch" {
+        type master;
+        file "/etc/bind/zones/tahm-ken.ch";
+};
