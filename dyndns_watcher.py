@@ -5,12 +5,12 @@ import os
 import pathlib
 import tempfile
 import urllib.request
+import upnpclient
 
 from jinja2 import Template
 
 last_ip_filename = pathlib.Path(tempfile.gettempdir()) / "last_ip"
 bind_zone_folder = "/etc/bind/zones/"
-ip_fetcher_url = "https://ipecho.net/plain"
 no_ip_update_route = "https://dynupdate.no-ip.com/nic/update"
 
 config = json.load(open("config.json"))
@@ -21,7 +21,9 @@ try:
 except FileNotFoundError:
     previous_ip = None
 
-current_ip = urllib.request.urlopen(ip_fetcher_url).read().decode("utf-8")
+devices = upnpclient.discover()
+d = devices[0]
+current_ip = d.WANIPConn1.GetExternalIPAddress()["NewExternalIPAddress"]
 
 # nothing to do if the last check was
 if previous_ip == current_ip:
