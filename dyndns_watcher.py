@@ -15,6 +15,8 @@ no_ip_update_route = "https://dynupdate.no-ip.com/nic/update"
 
 config = json.load(open("config.json"))
 
+user_agent = "TheRaphael0000 dyndns_watcher/1.0 raphael.margueron@gmail.com"
+
 # get previous ip
 try:
     previous_ip = open(last_ip_filename, "rb").read().decode("utf-8")
@@ -41,7 +43,7 @@ request = urllib.request.Request(url)
 user_pass = f"{config['noip_user']}:{config['noip_pass']}".encode("ascii")
 b64_user_pass = base64.b64encode(user_pass)
 request.add_header("Authorization", f"Basic {b64_user_pass}")
-request.add_header("User-Agent", f"TheRaphael0000.ch https://github.com/theraphael0000/bind")
+request.add_header("User-Agent", user_agent)
 result = urllib.request.urlopen(request)
 print(result.read().decode("utf-8"))
 
