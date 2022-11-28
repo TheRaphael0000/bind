@@ -11,7 +11,6 @@ from jinja2 import Template
 
 last_ip_filename = pathlib.Path(tempfile.gettempdir()) / "last_ip"
 bind_zone_folder = "/etc/bind/zones/"
-upnp_descriptor_url = "http://192.168.0.254:60000/b54e41a6/gatedesc.xml"
 no_ip_update_route = "https://dynupdate.no-ip.com/nic/update"
 
 config = json.load(open("config.json"))
@@ -24,7 +23,7 @@ try:
 except FileNotFoundError:
     previous_ip = None
 
-router = upnpclient.Device(upnp_descriptor_url)
+router = upnpclient.discover()[0]
 current_ip = router.WANIPConn1.GetExternalIPAddress()["NewExternalIPAddress"]
 
 # nothing to do if the last check was
