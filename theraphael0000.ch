@@ -13,5 +13,6 @@ $TTL 604800
 www          IN  A {{ ip }}
 files        IN  A {{ ip }}
 dav          IN  A {{ ip }}
-challsection IN  A {{ ip }}
 cv           IN  A {{ ip }}
+blog         IN  A {{ ip }}
+

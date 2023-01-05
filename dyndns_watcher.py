@@ -24,7 +24,6 @@ except FileNotFoundError:
     previous_ip = None
 
 current_ip = urllib.request.urlopen(ip_fetcher).read().decode("utf-8")
-print(current_ip)
 
 # nothing to do if the last check was
 if previous_ip == current_ip:
