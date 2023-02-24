@@ -15,4 +15,4 @@ files        IN  A {{ ip }}
 dav          IN  A {{ ip }}
 cv           IN  A {{ ip }}
 blog         IN  A {{ ip }}
-
+patricia     IN  A {{ ip }}
