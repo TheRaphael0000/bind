@@ -12,3 +12,4 @@ $TTL 604800
 @   IN   A {{ ip }}
 www IN   A {{ ip }}
 @   IN TXT "google-site-verification=juHnnvBFhx_kHEm90KSORPPdhdXp-6yJ2IPQVtb5AF4"
+

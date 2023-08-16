@@ -11,3 +11,4 @@ $TTL 604800
 @   IN NS rmargueron.ch.
 @   IN  A {{ ip }}
 www IN  A {{ ip }}
+
