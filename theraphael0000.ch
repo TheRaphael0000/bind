@@ -16,4 +16,4 @@ dav          IN  A {{ ip }}
 cv           IN  A {{ ip }}
 blog         IN  A {{ ip }}
 patricia     IN  A {{ ip }}
-
+_discord.theraphael0000.ch. TXT dh=ece8a2680c233e5088c6735e5d3612f246f17534
